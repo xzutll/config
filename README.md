@@ -28,7 +28,21 @@
   - swappy
   - xdg-desktop-portal-gtk
 2. Preview
+***
+Desktop
+
+
 ![Desktop](Preview/Preview.png)
+***
+Rofi
+
+
+![Rofi](Preview/Preview-Rofi.png)
+***
+Kitty
+
+
+![Kitty](Preview/Preview-Kitty.png)
 
 
 
