@@ -1,3 +1,3 @@
-dir = "$HOME/.config/rofi/Wallpaper/theme.rasi"
+dir="$(cd "$(dirname "$0")" && pwd)/theme.rasi"
 
 
