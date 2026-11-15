@@ -13,8 +13,8 @@ window#waybar {
 }
 .module {
     border-radius: 6px;
-    padding: 4.8px 9.6px;
-    margin: 6.4px 4px;
+    padding: 4.4px 8.8px;
+    margin: 5.87px 3.67px;
 }
 window#waybar.hidden {
     opacity: 0.2;
@@ -66,8 +66,8 @@ button:hover {
     text-shadow: none;
     border-radius: 6px;
     transition: 0.2s ease;
-    padding: 0 6.4px 0 4px;
-    margin: 6.4px 4px;
+    padding: 0 5.87px 0 3.67px;
+    margin: 5.87px 3.67px;
 }
 
 
@@ -78,7 +78,7 @@ button:hover {
     text-shadow: none;
     border-radius: 6px;
     transition: 0.2s ease;
-    padding: 0 7.2px 0 5.6px;
+    padding: 0 6.6px 0 5.13px;
     margin: 0 2px;
     min-height: 0;
     min-width: 0;
@@ -176,16 +176,16 @@ label:focus {
 }
 #network {
     border-radius: 6px;
-    padding: 4.8px 11.2px;
-    padding-right: 15.2px;
-    margin: 6.4px 4px;
+    padding: 4.4px 10.27px;
+    padding-right: 13.93px;
+    margin: 5.87px 3.67px;
     background-color: #24273a;
     font-size: 14px;
 }    
 #clock {
     border-radius: 6px;
-    padding: 4.8px 9.6px;
-    margin: 6.4px 4px;
+    padding: 4.4px 8.8px;
+    margin: 5.87px 3.67px;
     background-color: #24273a;
 } 
 #cpu {
@@ -199,9 +199,9 @@ label:focus {
 #memory {
     background-color: #24273a;
     border-radius: 6px;
-    padding: 4.8px 9.6px;
-    padding-right: 16px;
-    margin: 6.4px 4px;
+    padding: 4.4px 8.8px;
+    padding-right: 14.67px;
+    margin: 5.87px 3.67px;
 }
 
 #disk {
@@ -219,8 +219,8 @@ label:focus {
 #pulseaudio {
     background-color: #24273a;
     border-radius: 6px;
-    padding: 4.8px 9.6px;
-    margin: 6.4px 4px;
+    padding: 4.4px 8.8px;
+    margin: 5.87px 3.67px;
 }
 
 #pulseaudio.muted {
