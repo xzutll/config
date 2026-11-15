@@ -103,6 +103,14 @@ hl.config({
 })
 
 -- ANIMATION CURVES
+hl.curve("wind", {
+    type = "bezier",
+    points = {
+	{0.05, 0.9},
+	{0.1, 1.05},
+    },
+})
+
 hl.curve("easeOutQuint", {
     type = "bezier",
     points = {
@@ -177,7 +185,7 @@ hl.animation({
     leaf = "windowsIn",
     enabled = true,
     speed = 4.1,
-    bezier = "overshot",
+    bezier = "wind",
     style = "popin 87%",
 })
 
@@ -185,7 +193,7 @@ hl.animation({
     leaf = "windowsOut",
     enabled = true,
     speed = 1.49,
-    bezier = "overshot",
+    bezier = "wind",
     style = "popin 87%",
 })
 
@@ -251,7 +259,7 @@ hl.animation({
     leaf = "workspaces",
     enabled = true,
     speed = 1.94,
-    bezier = "overshot",
+    bezier = "wind",
     style = "fade",
 })
 
@@ -259,7 +267,7 @@ hl.animation({
     leaf = "workspacesIn",
     enabled = true,
     speed = 1,
-    bezier = "overshot",
+    bezier = "wind",
     style = "slide",
 })
 
