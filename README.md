@@ -28,7 +28,7 @@
   - swappy
   - xdg-desktop-portal-gtk
 2. Preview
-![Desktop](Preview.png)
+![Desktop](Preview/Preview.png)
 
 
 
