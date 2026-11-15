@@ -43,6 +43,11 @@ Kitty
 
 
 ![Kitty](Preview/Preview-Kitty.png)
+***
+Waybar
+
+
+![Waybar](Preview/Preview-Waybar.png)
 
 
 
