@@ -126,6 +126,14 @@ hl.curve("linear", {
     },
 })
 
+hl.curve("overshot", {
+    type = "bezier",
+    points = { 
+	{0.05, 0.9},
+	{0.1, 1},
+    },
+})
+
 hl.curve("almostLinear", {
     type = "bezier",
     points = {
@@ -250,16 +258,16 @@ hl.animation({
     leaf = "workspacesIn",
     enabled = true,
     speed = 1.21,
-    bezier = "almostLinear",
-    style = "fade",
+    bezier = "overshot",
+    style = "slide",
 })
 
 hl.animation({
     leaf = "workspacesOut",
     enabled = true,
     speed = 1.94,
-    bezier = "almostLinear",
-    style = "fade",
+    bezier = "overshot",
+    style = "slide",
 })
 
 hl.animation({
@@ -436,5 +444,3 @@ hl.window_rule({
     move = "20 monitor_h-120",
     float = true,
 })
-
-
