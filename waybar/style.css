@@ -1,5 +1,3 @@
-@import "mocha.css";
-
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: JetBrainsMono Nerd Font;
@@ -9,7 +7,7 @@
 window#waybar {
     background-color: transparent;
     border-bottom: transparent;
-    color: @text;
+    color: #c0caf5;
     transition-property: background-color;
     transition-duration: .5s
 }
@@ -32,11 +30,11 @@ window#waybar.solo {
 */
 
 window#waybar.termite {
-    background-color: @surface1;
+    background-color: #414868;
 }
 
 window#waybar.chromium {
-    background-color: @crust;
+    background-color: #1f2335;
     border: none;
 }
 
@@ -51,19 +49,19 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px @text;
+    box-shadow: inset 0 -3px #c0caf5;
 }
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: @text;
-    color: @base
+    background-color: #c0caf5;
+    color: #24283b
 
 }
 
 #workspaces{
-    background-color: @base;
-    color: @overlay1;
+    background-color: #24283b;
+    color: #737aa2;
     box-shadow: none;
     text-shadow: none;
     border-radius: 6px;
@@ -75,7 +73,7 @@ button:hover {
 
 #workspaces button {
     background: rgba(23, 23, 23, 0.0);
-    color: @lavender;
+    color: #7dcfff;
     box-shadow: none;
     text-shadow: none;
     border-radius: 6px;
@@ -92,19 +90,19 @@ button:hover {
 }
 
 #workspaces button.active { 
-    color: @lavender;
+    color: #7dcfff;   
     transition: all 0.3s ease;
 }
 
 #workspaces button:hover {
-    color: @green;
+    color: #bb9af7;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #mode {
-    background-color: @surface2;
-    box-shadow: inset 0 -3px @text;
+    background-color: #414868;
+    box-shadow: inset 0 -3px #c0caf5;
 }
 
 #clock,
@@ -125,7 +123,7 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0 10px;
-    color: @text;
+    color: #c0caf5;
 }
 
 #window {
@@ -143,30 +141,30 @@ button:hover {
 }
 
 #clock {
-    background-color: @base;
+    background-color: #24283b;
 }
 
 #battery {
-    background-color: @base;
-    color: @text;
+    background-color: #24283b;
+    color: #c0caf5;
 }
 
 #battery.charging, #battery.plugged {
-    color: @crust;
-    background-color: @green;
+    color: #1f2335;
+    background-color: #9ece6a;
 }
 
 @keyframes blink {
     to {
-        background-color: @text;
-        color: @crust;
+        background-color: #c0caf5;
+        color: #1f2335;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: @red;
-    color: @crust;
+    background-color: #f7768e;
+    color: #1f2335;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -174,24 +172,24 @@ button:hover {
     animation-direction: alternate;
 }
 label:focus {
-    background-color: @crust;
+    background-color: #1f2335;
 }
 #network {
     border-radius: 6px;
     padding: 4.4px 10.27px;
     padding-right: 13.93px;
     margin: 5.87px 2px;
-    background-color: @base;
+    background-color: #24283b;
     font-size: 14px;
 }    
 #clock {
     border-radius: 6px;
     padding: 4.4px 8.8px;
     margin: 5.87px 2px;
-    background-color: @base;
+    background-color: #24283b;
 } 
 #cpu {
-    background-color: @base;
+    background-color: #24283b;
     border-radius: 6px;
     padding: 4.8px  10px;
     padding-right: 14px;
@@ -199,7 +197,7 @@ label:focus {
 }
 
 #memory {
-    background-color: @base;
+    background-color: #24283b;
     border-radius: 6px;
     padding: 4.4px 8.8px;
     padding-right: 14.67px;
@@ -207,60 +205,57 @@ label:focus {
 }
 
 #disk {
-    background-color: @peach;
-    color: @crust;
+    background-color: #ff9e64;
 }
 
 #backlight {
-    background-color: @teal;
-    color: @crust;
+    background-color: #73daca;
 }
 
 #network.disconnected {
-    background-color: @red;
-    color: @crust;
+    background-color: #f7768e;
 }
 
 #pulseaudio {
-    background-color: @base;
+    background-color: #24283b;
     border-radius: 6px;
     padding: 4.4px 8.8px;
     margin: 5.87px 2px;
 }
 
 #pulseaudio.muted {
-    background-color: @base;
-    color: @overlay0;
+    background-color: #24283b;
+    color: #565f89;
 }
 
 #mpd {
-    background-color: @green;
-    color: @crust;
+    background-color: #9ece6a;
+    color: #1f2335;
 }
 
 #mpd.disconnected {
-    background-color: @red;
+    background-color: #f7768e;
 }
 
 #mpd.stopped {
-    background-color: @overlay2;
+    background-color: #737aa2;
 }
 
 #mpd.paused {
-    background-color: @teal;
+    background-color: #73daca;
 }
 
 #language {
-    background: @teal;
-    color: @crust;
+    background: #1abc9c;
+    color: #1f2335;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
 }
 
 #keyboard-state {
-    background: @green;
-    color: @crust;
+    background: #9ece6a;
+    color: #1f2335;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -271,11 +266,11 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-    background: alpha(@crust, 0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 #scratchpad {
-    background: alpha(@crust, 0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 #scratchpad.empty {
@@ -288,37 +283,36 @@ label:focus {
 
 #privacy-item {
     padding: 0 5px;
-    color: @crust;
+    color: #1f2335;
 }
 
 #privacy-item.screenshare {
-    background-color: @peach;
+    background-color: #ff9e64;
 }
 
 #privacy-item.audio-in {
-    background-color: @green;
+    background-color: #9ece6a;
 }
 
 #privacy-item.audio-out {
-    background-color: @blue;
+    background-color: #7aa2f7;
 }
 
 #custom-power {
-    background-color: @red;
-    color: @crust;
+    background-color: #ff007c;
     font-size: 16px;
 }
 
 #custom-power:hover,
 box:hover > #custom-power {
-    background-color: @text;
-    color: @red;
+    background-color: #c0caf5;
+    color: #ff007c;
     font-size: 16px;
 }
 
 #custom-rofi {
-    background-color: @base;
-    color: @text;
+    background-color: #24283b;
+    color: #c0caf5;
     font-size: 16px;
     padding-right: 2px;
     padding-left: 8px;
@@ -326,6 +320,6 @@ box:hover > #custom-power {
 
 #custom-rofi:hover,
 box:hover > #custom-rofi {
-    background-color: @text;
-    color: @base;
+    background-color: #c0caf5;
+    color: #24283b;
 }
