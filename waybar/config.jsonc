@@ -4,7 +4,7 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 0, // Gaps between modules (CSS margin으로 조절)
+    "spacing": 3, // Gaps between modules
     // Choose the order of the modules
     "modules-left": [
         "hyprland/mode",
@@ -128,7 +128,7 @@
     },
     "custom/power": {
         "format": "󰐥",
-	"on-click": "COMING SOON!"
+	"on-click": "sh ~/.config/rofi/files/powermenu/type-1/powermenu.sh"
     },
     "custom/rofi": {
 	"format": "󰣇 ",
@@ -136,4 +136,3 @@
 	"tooltip": false
     }
 }
-
