@@ -19,16 +19,17 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("QT_IM_MODULE", "fcitx")
 hl.env("XMODIFIERS", "@im=fcitx")
 hl.env("SDL_IM_MODULE", "fcitx")
-hl.env("QT_QPA_PLATFORMTHEME","qt6ct")
 
 -- AUTOSTART
 -- Original `exec` commands are run at Hyprland start.
 hl.on("hyprland.start", function()
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
-    hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'") 
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("fcitx5")
     hl.exec_cmd("waybar")
-    hl.exec_cmd("awww-daemon")
+    -- 데몬이 뜰 때까지 잠깐 기다린 뒤 배경화면 적용
+    hl.exec_cmd("awww-daemon & sleep 1; awww img ~/.config/hypr/Wallpaper/1.jpg")
 end)
 
 -- LOOK AND FEEL
@@ -96,10 +97,10 @@ hl.config({
         },
     },
     render = {
-    direct_scanout = 0,
-    send_content_type = 0,
-    cm_auto_hdr = 0,
-  },
+        direct_scanout = 0,
+        send_content_type = 0,
+        cm_auto_hdr = 0,
+    },
 })
 
 -- ANIMATION CURVES
@@ -293,11 +294,6 @@ hl.gesture({
     action = "workspace",
 })
 
-hl.device({
-    name = "epic-mouse-v1",
-    sensitivity = -0.5,
-})
-
 -- KEYBINDINGS
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
@@ -314,9 +310,10 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("waybar"))
+-- Waybar 숨기기/보이기 토글 (새로 띄우지 않음)
+hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar || waybar"))
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
-hl.bind("SUPER + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
+hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
 
 -- Focus
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -452,4 +449,13 @@ hl.window_rule({
     },
     move = "20 monitor_h-120",
     float = true,
+})
+
+-- 영상·그림 작업 앱은 투명도 적용 안 함
+hl.window_rule({
+    name = "opaque-media",
+    match = {
+        class = "^(mpv|gimp.*)$",
+    },
+    opaque = true,
 })
