@@ -14,7 +14,7 @@ window#waybar {
 .module {
     border-radius: 6px;
     padding: 4.4px 8.8px;
-    margin: 5.87px 3.67px;
+    margin: 5.87px 2px;
 }
 window#waybar.hidden {
     opacity: 0.2;
@@ -67,7 +67,7 @@ button:hover {
     border-radius: 6px;
     transition: 0.2s ease;
     padding: 0 5.8px 0 2.5px;
-    margin: 5.87px 3.67px;
+    margin: 5.87px 2px;
 }
 
 
@@ -178,14 +178,14 @@ label:focus {
     border-radius: 6px;
     padding: 4.4px 10.27px;
     padding-right: 13.93px;
-    margin: 5.87px 3.67px;
+    margin: 5.87px 2px;
     background-color: #24273a;
     font-size: 14px;
 }    
 #clock {
     border-radius: 6px;
     padding: 4.4px 8.8px;
-    margin: 5.87px 3.67px;
+    margin: 5.87px 2px;
     background-color: #24273a;
 } 
 #cpu {
@@ -193,7 +193,7 @@ label:focus {
     border-radius: 6px;
     padding: 4.8px  10px;
     padding-right: 14px;
-    margin: 6.4px 4px;
+    margin: 6.4px 2px;
 }
 
 #memory {
@@ -201,7 +201,7 @@ label:focus {
     border-radius: 6px;
     padding: 4.4px 8.8px;
     padding-right: 14.67px;
-    margin: 5.87px 3.67px;
+    margin: 5.87px 2px;
 }
 
 #disk {
@@ -220,7 +220,7 @@ label:focus {
     background-color: #24273a;
     border-radius: 6px;
     padding: 4.4px 8.8px;
-    margin: 5.87px 3.67px;
+    margin: 5.87px 2px;
 }
 
 #pulseaudio.muted {

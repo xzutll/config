@@ -4,7 +4,7 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 6, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (CSS margin으로 조절)
     // Choose the order of the modules
     "modules-left": [
         "hyprland/mode",
