@@ -51,6 +51,8 @@ Waybar
 ![Waybar](Preview/Preview-Waybar.png)
 
 
+! 귀차니즘으로 인한 AI사용은 양해 부탁드립니다
+
 
 
 
