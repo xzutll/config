@@ -66,7 +66,7 @@ button:hover {
     text-shadow: none;
     border-radius: 6px;
     transition: 0.2s ease;
-    padding: 0 5.87px 0 3.67px;
+    padding: 0 5.8px 0 2.5px;
     margin: 5.87px 3.67px;
 }
 
@@ -303,7 +303,8 @@ label:focus {
     font-size: 16px;
 }
 
-#custom-power:hover {
+#custom-power:hover,
+box:hover > #custom-power {
     background-color: #ffffff;
     color: #d20f39;
     font-size: 16px;
@@ -317,7 +318,8 @@ label:focus {
     padding-left: 8px;
 }
 
-#custom-rofi:hover {
+#custom-rofi:hover,
+box:hover > #custom-rofi {
     background-color: #ffffff;
     color: #24273a;
 }
