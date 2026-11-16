@@ -14,7 +14,7 @@
   - gimp
   - mpv
   - flatpak
-  - fctix5
+  - fcitx5
   - fcitx5-configtool
   - fcitx5-hangul
   - pavucontrol
