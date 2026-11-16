@@ -128,7 +128,7 @@
     },
     "custom/power": {
         "format": "󰐥",
-	"on-click": "sh ~/.config/rofi/files/powermenu/type-1/powermenu.sh"
+	"on-click": "COMING SOON!"
     },
     "custom/rofi": {
 	"format": "󰣇 ",
