@@ -28,7 +28,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("fcitx5")
     hl.exec_cmd("waybar")
-    -- 데몬이 뜰 때까지 잠깐 기다린 뒤 배경화면 적용
     hl.exec_cmd("awww-daemon & sleep 1; awww img ~/.config/hypr/Wallpaper/1.jpg")
 end)
 
@@ -115,20 +114,25 @@ hl.curve("quick", { type = "bezier", points = { {0.15, 0}, {0.1, 1} } })
 -- ANIMATIONS
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "overshot" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
+
 hl.animation({ leaf = "windows", enabled = true, speed = 4.79, bezier = "easeOutQuint" })
 hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, bezier = "wind", style = "popin 87%" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "wind", style = "popin 87%" })
+
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
+
 hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "easeOutQuint" })
 hl.animation({ leaf = "layersIn", enabled = true, speed = 4, bezier = "easeOutQuint", style = "fade" })
 hl.animation({ leaf = "layersOut", enabled = true, speed = 1.5, bezier = "linear", style = "fade" })
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 1.94, bezier = "wind", style = "fade" })
-hl.animation({ leaf = "workspacesIn", enabled = true, speed = 1, bezier = "wind", style = "slide" })
+
+hl.animation({ leaf = "workspaces", enabled = true, speed = 3, bezier = "wind", style = "fade" })
+hl.animation({ leaf = "workspacesIn", enabled = true, speed = 3, bezier = "wind", style = "slide" })
 hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.7, bezier = "overshot", style = "slide" })
+
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
 
 -- INPUT
@@ -154,7 +158,6 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
--- Waybar 숨기기/보이기 토글 (새로 띄우지 않음)
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar || waybar"))
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
@@ -295,7 +298,6 @@ hl.window_rule({
     float = true,
 })
 
--- 영상·그림 작업 앱은 투명도 적용 안 함
 hl.window_rule({
     name = "opaque-media",
     match = {
