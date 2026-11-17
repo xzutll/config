@@ -49,7 +49,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: inset 0 -3px #7aa2f7;
 }
 
 /* you can set a style on hover for any module like this */
@@ -72,7 +72,7 @@ button:hover {
 
 
 #workspaces button {
-    background: rgba(23, 23, 23, 0.0);
+    background: transparent;
     color: #7dcfff;
     box-shadow: none;
     text-shadow: none;
@@ -266,11 +266,11 @@ label:focus {
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+    background: #414868;
 }
 
 #scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+    background: #24283b;
 }
 
 #scratchpad.empty {
@@ -299,14 +299,14 @@ label:focus {
 }
 
 #custom-power {
-    background-color: #ff007c;
+    background-color: #d20f39;
     font-size: 16px;
 }
 
 #custom-power:hover,
 box:hover > #custom-power {
     background-color: #c0caf5;
-    color: #ff007c;
+    color: #d20f39;
     font-size: 16px;
 }
 
