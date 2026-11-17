@@ -28,7 +28,7 @@
   - swappy
   - xdg-desktop-portal-gtk
   - adw-gtk-theme
-2. Preview
+### 2. Preview
 ***
 Desktop
 
