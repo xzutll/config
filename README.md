@@ -28,7 +28,12 @@
   - swappy
   - xdg-desktop-portal-gtk
   - adw-gtk-theme
-### 2. Preview
+# 2. Installation
+```shell
+git clone https://github.com/xzutll/config && cd config && ./install.sh
+```
+
+# 3. Preview
 ***
 Desktop
 
