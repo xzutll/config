@@ -1,0 +1,30 @@
+@import "~/.config/rofi/config.rasi"
+
+window {
+    width: 400px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    padding: 10px;
+    children: [ prompt ];
+}
+
+prompt {
+    expand: false;
+    padding: 4px 12px 4px 10px;
+    border-radius: 10px;
+    background-color: #d20f39;
+    text-color: #fafafa;
+}
+
+listview {
+    lines: 4;
+    columns: 1;
+    padding: 0px 20px 20px 20px;
+    scrollbar: false;
+    fixed-height: true;
+}
