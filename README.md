@@ -20,6 +20,7 @@
   - pavucontrol
   - Jetbrains Mono Nerd
   - Noto Fonts CJK
+  - SF Pro
   - xdg-desktop-portal-hyprland
   - hyprpolkitagent
   - pipewire
