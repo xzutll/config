@@ -34,7 +34,6 @@ git clone https://github.com/xzutll/config && cd config && ./install.sh
 ```
 
 # 3. Preview
-***
 Desktop
 
 
