@@ -28,15 +28,14 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("fcitx5")
     hl.exec_cmd("waybar")
-    -- 데몬이 뜰 때까지 잠깐 기다린 뒤 배경화면 적용
     hl.exec_cmd("awww-daemon & sleep 1; awww img ~/.config/hypr/Wallpaper/1.jpg")
 end)
 
 -- LOOK AND FEEL
 hl.config({
     general = {
-        gaps_in = 3,
-        gaps_out = 5,
+        gaps_in = 2,
+        gaps_out = 3,
         border_size = 0,
         resize_on_border = false,
         allow_tearing = false,
