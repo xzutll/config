@@ -1,4 +1,4 @@
-# Xzutll's Hyprland Dotfile
+# Xzutll's Hyprland Dotfiles
 1. Dependencies
   - hyprland
   - waybar
